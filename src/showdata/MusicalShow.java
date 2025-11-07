@@ -1,11 +1,11 @@
-package ShowData;
+package showdata;
 
-import PersonData.Director;
-import PersonData.Person;
+import persondata.Director;
+import persondata.Person;
 
 public class MusicalShow extends Show {
-    private final Person musicAuthor;
-    private final String librettoText;
+    protected Person musicAuthor;
+    protected String librettoText;
 
     public MusicalShow(String title, int duration, Director director,
                        Person musicAuthor, String librettoText) {

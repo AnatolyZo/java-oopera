@@ -1,11 +1,11 @@
-package PersonData;
+package persondata;
 
 import java.util.Objects;
 
 public class Person {
-    private final String name;
-    private final String surname;
-    private final Gender gender;
+    protected String name;
+    protected String surname;
+    protected Gender gender;
 
     public Person(String name, String surname, Gender gender) {
         this.name = name;
@@ -23,11 +23,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", gender=" + gender +
-                '}';
+        return getName() + " " + getSurname();
     }
 
     @Override
@@ -41,5 +37,17 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(name, surname, gender);
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 }

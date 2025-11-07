@@ -1,4 +1,4 @@
-package PersonData;
+package persondata;
 
 public enum Gender {
     MALE,

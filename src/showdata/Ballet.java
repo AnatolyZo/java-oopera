@@ -1,7 +1,7 @@
-package ShowData;
+package showdata;
 
-import PersonData.Director;
-import PersonData.Person;
+import persondata.Director;
+import persondata.Person;
 
 public class Ballet extends MusicalShow {
     Person choreographer;

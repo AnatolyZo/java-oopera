@@ -1,5 +1,5 @@
-import ShowData.*;
-import PersonData.*;
+import showdata.*;
+import persondata.*;
 
 public class Theatre {
 
@@ -10,6 +10,8 @@ public class Theatre {
         Actor firstActor = new Actor("Сергей", "Васильев", Gender.MALE, 170);
         Actor secondActor = new Actor("Григорий", "Дорофеев", Gender.MALE, 183);
         Actor thirdActor = new Actor("Елена", "Тимирязева", Gender.FEMALE, 165);
+        //Четвертый актер введен для случая наличия однофамильца в спектакле при замене актера
+        Actor fourthActor = new Actor("Кирилл", "Дорофеев", Gender.MALE, 187);
         Director firstDirector = new Director("Иван", "Дмитриев", Gender.MALE, 12);
         Director secondDirector = new Director("Марина", "Аксенова", Gender.FEMALE, 14);
         Person choreographer = new Person("Тамара", "Медведева", Gender.FEMALE);
@@ -28,6 +30,7 @@ public class Theatre {
 
         opera.addActor(secondActor);
         opera.addActor(thirdActor);
+        opera.addActor(fourthActor);
 
         ballet.addActor(firstActor);
         ballet.addActor(secondActor);
@@ -36,23 +39,18 @@ public class Theatre {
         //Выполнение пункта №4 ТЗ - вывод списка актеров для каждого спектакля
         System.out.println("Актеры, участвующие в обычном спектакле:");
         show.printListOfActors();
-        System.out.println();
         System.out.println("Актеры, участвующие в опере:");
         opera.printListOfActors();
-        System.out.println();
         System.out.println("Актеры, участвующие в балете:");
         ballet.printListOfActors();
-        System.out.println();
 
         //Выполнение пункта №5 ТЗ - замена актера в одном изспектаклей
         opera.replaceActor(firstActor, "Дорофеев");
         System.out.println("Актеры, участвующие в опере:");
         opera.printListOfActors();
-        System.out.println();
 
         //Выполнение пункта №6 ТЗ - попытка замены несуществующего актера
         ballet.replaceActor(firstActor, "Николаев");
-        System.out.println();
 
         //Выполнение пункта №6 ТЗ - вывод текста либретто для оперы и балета
         opera.printLibretto();
