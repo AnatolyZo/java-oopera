@@ -23,7 +23,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return getName() + " " + getSurname();
+        return name + " " + surname;
     }
 
     @Override

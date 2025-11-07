@@ -4,7 +4,7 @@ import persondata.Director;
 import persondata.Person;
 
 public class Opera extends MusicalShow {
-    int choirSize;
+    private int choirSize;
 
     public Opera(String title, int duration, Director director,
                  Person musicAuthor, String librettoText, int choirSize) {
